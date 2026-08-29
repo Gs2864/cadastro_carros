@@ -22,7 +22,6 @@ public class CarroController {
 
     private Long proximoId = 1L;
 
-    // POST /carros
     @PostMapping
     public Carro cadastrar(@RequestBody Carro carro) {
 
@@ -33,13 +32,11 @@ public class CarroController {
         return carro;
     }
 
-    // GET /carros
     @GetMapping
     public List<Carro> listarTodos() {
         return carros;
     }
 
-    // GET /carros/{id}
     @GetMapping("/{id}")
     public Carro buscarPorId(@PathVariable Long id) {
 
@@ -49,7 +46,7 @@ public class CarroController {
                 .orElse(null);
     }
 
-    // DELETE /carros/{id}
+
     @DeleteMapping("/{id}")
     public String remover(@PathVariable Long id) {
 
@@ -64,7 +61,6 @@ public class CarroController {
         return "Carro não encontrado.";
     }
 
-    // GET /carros/ano/{ano}
     @GetMapping("/ano/{ano}")
     public List<Carro> buscarPorAno(@PathVariable Integer ano) {
 
@@ -73,7 +69,6 @@ public class CarroController {
                 .toList();
     }
 
-    // GET /carros/novos
     @GetMapping("/novos")
     public List<Carro> listarCarrosNovos() {
 
