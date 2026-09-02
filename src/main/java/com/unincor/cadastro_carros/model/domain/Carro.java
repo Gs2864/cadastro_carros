@@ -1,10 +1,5 @@
 package com.unincor.cadastro_carros.model.domain;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-
-
 public class Carro {
 
     private Long id;
@@ -15,10 +10,7 @@ public class Carro {
     private Integer cavalos;
     private Boolean hibrido;
 
-    public Carro() {
-    }
-
-    public Carro(Long id, String modelo, String marca, Integer ano,Double potencia, Integer cavalos, Boolean hibrido) {
+    public Carro(Long id, String modelo, String marca, Integer ano, Double potencia, Integer cavalos, Boolean hibrido) {
         this.id = id;
         this.modelo = modelo;
         this.marca = marca;
@@ -26,6 +18,9 @@ public class Carro {
         this.potencia = potencia;
         this.cavalos = cavalos;
         this.hibrido = hibrido;
+    }
+
+    public Carro() {
     }
 
     public Long getId() {
@@ -84,3 +79,4 @@ public class Carro {
         this.hibrido = hibrido;
     }
 }
+
